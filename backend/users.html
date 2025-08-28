@@ -4,7 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Teachers Record MLS</title>
+    <title>Users Record</title>
     <!-- base:css -->
     <link rel="stylesheet" href="../vendors/mdi/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="../vendors/base/vendor.bundle.base.css">
@@ -68,8 +68,8 @@
               </li>	
             </ul>
             <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-                <a class="navbar-brand brand-logo" href="index.html"><img src="../images/logo/logo.png" alt="logo"/></a>
-                <a class="navbar-brand brand-logo-mini" href="index.html"><img src="../images/logo-mini.svg" alt="logo"/></a>
+                <a class="navbar-brand brand-logo" href="dashboard.html"><img src="../images/logo/logo.png" alt="logo"/></a>
+                <a class="navbar-brand brand-logo-mini" href="dashboard.html"><img src="../images/logo-mini.svg" alt="logo"/></a>
             </div>
             <ul class="navbar-nav navbar-nav-right">
                 <li class="nav-item nav-profile dropdown">
@@ -143,45 +143,37 @@
                 <h4 class="card-title mb-4 text-primary">Teachers List</h4>
                 
                 <div class="table-responsive">
-                <table id="teachersTable" class="table table-striped table-bordered">
+                <table id="productTable" class="table table-striped table-bordered">
                     <thead class="table-light">
                     <tr>
                         <th>ID</th>
                         <th>Full Name</th>
-                        <th>Subject</th>
-                        <th>Class</th>
-                        <th>Phone</th>
                         <th>Email</th>
-                        <th>Address</th>
+                        <th>Username</th>
+                        <th>Phone</th>
                     </tr>
                     </thead>
                     <tbody>
                     <tr>
                         <td>T001</td>
                         <td>John Doe</td>
-                        <td>Mathematics</td>
-                        <td>SS2</td>
-                        <td>08012345678</td>
                         <td>johndoe@example.com</td>
-                        <td>12 Unity Street, Lagos</td>
+                        <td>johndoe</td>
+                        <td>08012345678</td>
                     </tr>
                     <tr>
                         <td>T002</td>
                         <td>Mary Abu Bilal</td>
-                        <td>English</td>
-                        <td>SS1</td>
-                        <td>08087654321</td>
                         <td>maryj@example.com</td>
-                        <td>45 Peace Avenue, Abuja</td>
+                        <td>maryj</td>
+                        <td>08087654321</td>
                     </tr>
                     <tr>
                         <td>T003</td>
                         <td>James Smith</td>
-                        <td>Physics</td>
+                        <td>Physics</td>  
                         <td>SS3</td>
                         <td>07033445566</td>
-                        <td>jsmith@example.com</td>
-                        <td>78 Liberty Road, Port Harcourt</td>
                     </tr>
                     </tbody>
                 </table>
@@ -234,7 +226,7 @@
   <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.html5.min.js"></script>
 
   <script>
-   $('#teachersTable').DataTable({
+   $('#productTable').DataTable({
   dom: 'Blfrtip', // Added "l" for length dropdown
   pageLength: 5,
   lengthMenu: [5, 10, 25, 50],
