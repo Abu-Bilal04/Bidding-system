@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Products Record</title>
+    <title>Categories Record</title>
 
     <!-- base:css -->
     <link rel="stylesheet" href="../vendors/mdi/css/materialdesignicons.min.css">
@@ -108,16 +108,16 @@
                 <span class="menu-title">Dashboard</span>
               </a>
             </li>
-            <li class="nav-item">
-              <a href="categories.html" class="nav-link">
+            <li class="nav-item active">
+              <a href="categories.html" class="nav-link active">
                 <i class="mdi mdi-view-list menu-icon"></i>
                 <span class="menu-title">Categories</span>
                 <i class="menu-arrow"></i>
               </a>
             </li>
 
-            <li class="nav-item active">
-              <a href="products.html" class="nav-link active">
+            <li class="nav-item">
+              <a href="products.html" class="nav-link">
                 <i class="mdi mdi-cube-outline menu-icon"></i>
                 <span class="menu-title">Products</span>
                 <i class="menu-arrow"></i>
@@ -137,12 +137,12 @@
     <!-- Main Content (Form + DataTable) -->
     <div class="container mt-5">
       <div class="row">
-        <!-- Student Registration Form -->
+        <!-- category Registration Form -->
         <div class="col-md-5 mb-3">
           <div class="card">
             <div class="card-body">
               <h4 class="card-title mb-4 text-primary">Register Category</h4>
-              <form id="studentForm">
+              <form id="categoryForm">
                 
                 <div class="mb-3">
                   <label for="sponsorPhone" class="form-label">Category</label>
@@ -163,7 +163,7 @@
             <div class="card-body">
               <h4 class="card-title mb-4 text-primary">Category List</h4>
               <div class="table-responsive">
-                <table id="productTable" class="table table-striped table-bordered">
+                <table id="categoriesTable" class="table table-striped table-bordered">
                   <thead class="table-light">
                     <tr>
                       <th>ID</th>
@@ -209,7 +209,7 @@
     <!-- DataTable Init -->
     <script>
       $(document).ready(function() {
-        $('#productTable').DataTable({
+        $('#categoriesTable').DataTable({
           dom: 'Blfrtip',
           pageLength: 5,
           lengthMenu: [5, 10, 25, 50],
