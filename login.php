@@ -1,3 +1,5 @@
+<?php include "include/server.php"; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,71 +7,91 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Student login</title>
-  <!-- base:css -->
-  <link rel="stylesheet" href="../vendors/mdi/css/materialdesignicons.min.css">
-  <link rel="stylesheet" href="../vendors/base/vendor.bundle.base.css">
-  <!-- endinject -->
-  <!-- plugin css for this page -->
-  <!-- End plugin css for this page -->
-  <!-- inject:css -->
-  <link rel="stylesheet" href="../css/style.css">
-  <!-- endinject -->
-  <link rel="shortcut icon" href="../images/favicon.png" />
+  <title>User Login</title>
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Icons (optional) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="iziToast/css/iziToast.min.css">
+  <script src="iziToast/js/iziToast.min.js"></script>
+
+  <style>
+    body {
+      background: #f8f9fa;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .login-card {
+      max-width: 400px;
+      width: 100%;
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      background: #fff;
+    }
+    .brand-logo img {
+      max-width: 120px;
+      margin-bottom: 1rem;
+    }
+  </style>
 </head>
 
 <body>
-  <div class="container-scroller">
-    <div class="container-fluid page-body-wrapper full-page-wrapper">
-      <div class="main-panel">
-        <div class="content-wrapper d-flex align-items-center auth px-0">
-          <div class="row w-100 mx-0">
-            <div class="col-lg-4 mx-auto">
-              <div class="auth-form-light text-left py-5 px-4 px-sm-5">
-                <div class="brand-logo">
-                  <img src="../images/logo.svg" alt="logo">
-                </div>
-                <h4>Sign in to continue</h4>
-                <form class="pt-3">
-                  <div class="form-group">
-                    <input type="email" class="form-control form-control-lg" id="exampleInputEmail1" placeholder="Username">
-                  </div>
-                  <div class="form-group">
-                    <input type="password" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Password">
-                  </div>
-                  
-                  <div class="my-2 d-flex justify-content-between align-items-center">
-                    <div class="form-check">
-                      <label class="form-check-label text-muted">
-                        <input type="checkbox" class="form-check-input">
-                        Keep me signed in
-                      </label>
-                    </div>
-                    <a href="#" class="auth-link text-black">Forgot password?</a>
-                  </div>
 
-                  <div class="mt-3">
-                    <a class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" href="../index.html">SIGN IN</a>
-                  </div>
-                  
-                  
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- content-wrapper ends -->
+<?php if (isset($_GET['msg']) && $_GET['msg'] === "success") { ?>
+  <script>
+    iziToast.success({
+      title: 'Success',
+      message: 'Signup successful!',
+      position: 'topRight'
+    });
+  </script>
+
+<?php } elseif (isset($_GET['msg']) && $_GET['msg'] === "error") { ?>
+  <script>
+    iziToast.error({
+      title: 'Error',
+      message: 'An error occurred!',
+      position: 'topRight'
+    });
+  </script>
+<?php } ?>
+
+  <div class="login-card">
+    <div class="text-center">
+      <img src="images/logo/icon.png" alt="logo" style="width:50%">
     </div>
-    <!-- page-body-wrapper ends -->
-  </div>
-  <!-- container-scroller -->
-  <!-- base:js -->
-  <script src="../vendors/base/vendor.bundle.base.js"></script>
-  <!-- endinject -->
-  <!-- inject:js -->
-  <script src="../js/template.js"></script>
-  <!-- endinject -->
-</body>
+    <h4 class="text-center mb-4">Sign in to continue</h4>
+    
+    <form>
+      <!-- Username -->
+      <div class="mb-3">
+        <label for="username" class="form-label">Username</label>
+        <input type="email" class="form-control" id="username" name="email" placeholder="Enter your username">
+      </div>
 
+      <!-- Password -->
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password">
+      </div>
+
+      <!-- Submit Button -->
+      <div class="d-grid">
+        <button type="submit" class="btn btn-primary btn-lg" name="signin">SIGN IN</button>
+      </div>
+
+      <div class="mt-3">
+        <p class="mb-0">Don't have an account? <a href="signup.php" class="text-decoration-none">Sign up</a></p>
+      </div>
+    </form>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
