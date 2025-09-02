@@ -2,6 +2,6 @@
 
 error_reporting(0);
 $dbcon = mysqli_connect("localhost","root","");
-mysqli_select_db($dbcon,"cabana");
+mysqli_select_db($dbcon,"bidding");
 
 ?>
