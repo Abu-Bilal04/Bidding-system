@@ -67,11 +67,11 @@
     </div>
     <h4 class="text-center mb-4">Sign in to continue</h4>
     
-    <form>
+    <form method="POST">
       <!-- Username -->
       <div class="mb-3">
-        <label for="username" class="form-label">Username</label>
-        <input type="email" class="form-control" id="username" name="email" placeholder="Enter your username">
+        <label for="username" class="form-label">Email</label>
+        <input type="email" class="form-control" id="username" name="email" placeholder="Enter your email">
       </div>
 
       <!-- Password -->

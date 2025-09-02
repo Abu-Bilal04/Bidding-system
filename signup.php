@@ -113,14 +113,6 @@
         </div>
 
         <div class="col-md-6">
-          <!-- phone -->
-          <div class="mb-3">
-            <label for="phone" class="form-label">Phone number</label>
-            <input type="tel" class="form-control" id="phone" name="phone" name="phone" placeholder="Enter phone number">
-          </div>
-        </div>
-
-        <div class="col-md-6">
           <!-- username -->
           <div class="mb-3">
             <label for="username" class="form-label">Username</label>
@@ -129,10 +121,18 @@
         </div>
 
         <div class="col-md-6">
+          <!-- phone -->
+          <div class="mb-3">
+            <label for="phone" class="form-label">Phone number</label>
+            <input type="tel" class="form-control" id="phone" name="phone" placeholder="Enter phone number">
+          </div>
+        </div>
+
+        <div class="col-md-6">
           <!-- password -->
           <div class="mb-3">
             <label for="password" class="form-label">Password</label>
-            <input type="password" class="form-control" id="password" placeholder="Enter password">
+            <input type="password" class="form-control" id="password" placeholder="Enter password" name="password">
           </div>
         </div>
 
@@ -141,7 +141,7 @@
           <!-- Confirm password -->
           <div class="mb-3">
             <label for="confirm-password" class="form-label">Confirm Password</label>
-            <input type="password" class="form-control" id="confirm-password" placeholder="Confirm password">
+            <input type="password" class="form-control" id="confirm-password" placeholder="Confirm password" name="confirm_password">
           </div>
         </div>
       </div>
